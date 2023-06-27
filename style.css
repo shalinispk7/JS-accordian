@@ -1,0 +1,60 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing:border-box;
+}
+section{
+    margin-top: 50px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+.accordian{
+    width:820px;
+}
+.accordian h1{
+    text-align: center;
+}
+.accordian .content-box{
+    position:relative;
+    margin:10px 20px;
+}
+.accordian .content-box .label{
+    padding: 10px;
+    background-color: #2694af;
+    color:#fff;
+    cursor:pointer;
+    position:relative;
+}
+.accordian .content-box .label::before{
+    content: '+';
+    position: absolute;
+    top:50%;
+    right:20px;
+    transform:translateY(-50%);
+    font-size: 18px;
+}
+.accordian .content-box .content {
+    position: relative;
+    
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition:0.5s;
+    font-size: 20px;
+  text-align: justify;
+  width: 780px;
+}
+
+/* after script */
+
+.accordian  .content-box.active .label::before {
+    content: '-';
+    font-size:30px;
+}
+.accordian .content-box.active .content{
+    padding: 10px;
+    height:160px;
+    line-height: 30px;
+}
